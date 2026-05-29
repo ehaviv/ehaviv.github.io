@@ -43,9 +43,10 @@
     <h1>EHV Apps Support Center</h1>
     <p class="subtitle">Select your app below to get instant interactive help and solutions.</p>
     
+    <!-- ACCURATE DEVELOPER LINK -->
     <a href="https://google.com" target="_blank" class="btn-playstore">🤖 View All My Apps on Google Play Store</a>
 
-    <!-- THIS DISPLAY LINE TELLS THE CODE TO LOAD NOAM.JPG -->
+    <!-- SCREENSHOT IMAGE -->
     <div class="app-screenshot-container">
         <img src="noam.jpg" alt="Elbaz Haviv Google Play Store Apps" class="app-screenshot">
     </div>
@@ -54,9 +55,12 @@
     <div class="app-tabs">
         <button class="tab-btn active" onclick="switchApp('sudoku', this)">🧩 Sudoku Helper</button>
         <button class="tab-btn" onclick="switchApp('cryptarithm', this)">🔢 Cryptarithm Solver</button>
+        <button class="tab-btn" onclick="switchApp('regex', this)">⚙️ Regex Pattern Tester</button>
+        <button class="tab-btn" onclick="switchApp('bulls', this)">🐂 Bulls and Cows</button>
+        <button class="tab-btn" onclick="switchApp('hitmiss', this)">🎯 Hit Miss Game</button>
     </div>
 
-    <!-- SUDOKU FAQ SECTION -->
+    <!-- 1. SUDOKU FAQ SECTION -->
     <div id="sudoku" class="faq-section active">
         <h3>Sudoku Helper - FAQs</h3>
         <div class="faq-item">
@@ -69,12 +73,39 @@
         </div>
     </div>
 
-    <!-- CRYPTARITHM FAQ SECTION -->
+    <!-- 2. CRYPTARITHM FAQ SECTION -->
     <div id="cryptarithm" class="faq-section">
         <h3>Cryptarithm Solver - FAQs</h3>
         <div class="faq-item">
             <div class="faq-question" onclick="toggleFaq(this)">How do I synchronize my progress? <span class="arrow">+</span></div>
             <div class="faq-answer">Go to the Profile section inside the app menu and toggle the "Google Play Games Cloud Save" option to link your live data progress automatically.</div>
+        </div>
+    </div>
+
+    <!-- 3. REGEX FAQ SECTION -->
+    <div id="regex" class="faq-section">
+        <h3>Regex Pattern Tester - FAQs</h3>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">Does this app support flavor-specific regex? <span class="arrow">+</span></div>
+            <div class="faq-answer">Yes, you can toggle between Standard JavaScript, Python, and PCRE flavors inside the editor settings menu.</div>
+        </div>
+    </div>
+
+    <!-- 4. BULLS AND COWS FAQ SECTION -->
+    <div id="bulls" class="faq-section">
+        <h3>Bulls and Cows - FAQs</h3>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">What is the difference between a Bull and a Cow? <span class="arrow">+</span></div>
+            <div class="faq-answer">A "Bull" means a digit is correct and in the right position. A "Cow" means a digit is correct but in the wrong position.</div>
+        </div>
+    </div>
+
+    <!-- 5. HIT MISS FAQ SECTION -->
+    <div id="hitmiss" class="faq-section">
+        <h3>Hit Miss Game - FAQs</h3>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">How do I reset my high score statistics? <span class="arrow">+</span></div>
+            <div class="faq-answer">Navigate to Settings from the main dashboard, scroll down, and tap on "Clear Local History Data".</div>
         </div>
     </div>
 
