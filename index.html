@@ -12,7 +12,6 @@
         .btn-playstore { display: block; background: #27ae60; color: white; text-align: center; padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-bottom: 25px; font-size: 16px; box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2); transition: background 0.2s; }
         .btn-playstore:hover { background: #219653; }
         
-        /* SCREENSHOT LAYOUT STYLES */
         .app-screenshot-container { text-align: center; margin-bottom: 35px; }
         .app-screenshot { max-width: 100%; height: auto; max-height: 450px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 1px solid #e2e8f0; }
         
@@ -21,6 +20,7 @@
         .tab-btn { background: #e2e8f0; border: none; padding: 10px 18px; border-radius: 20px; cursor: pointer; font-weight: 600; color: #4a5568; transition: all 0.2s; font-size: 14px; }
         .tab-btn:hover { background: #cbd5e1; }
         .tab-btn.active { background: #3182ce; color: white; box-shadow: 0 4px 6px rgba(49, 130, 206, 0.3); }
+        
         .faq-section { display: none; }
         .faq-section.active { display: block; }
         .faq-item { border-bottom: 1px solid #edf2f7; padding: 16px 0; }
@@ -28,6 +28,7 @@
         .faq-question:hover { color: #3182ce; }
         .faq-answer { display: none; margin-top: 10px; color: #4a5568; line-height: 1.6; font-size: 15px; }
         .arrow { font-size: 18px; color: #a0aec0; transition: transform 0.2s; }
+        
         .contact-box { background: #ebf8ff; border: 1px solid #bee3f8; border-radius: 8px; padding: 20px; margin-top: 40px; text-align: center; }
         .contact-box h4 { margin: 0 0 10px 0; color: #2b6cb0; font-size: 18px; }
         .contact-box p { margin: 0 0 15px 0; color: #4a5568; font-size: 14px; }
@@ -43,10 +44,8 @@
     <h1>EHV Apps Support Center</h1>
     <p class="subtitle">Select your app below to get instant interactive help and solutions.</p>
     
-    <!-- ACCURATE DEVELOPER LINK -->
-    <a href="https://play.google.com/store/apps/developer?id=Elbaz+Haviv" target="_blank" class="btn-playstore">🤖 View All My Apps on Google Play Store</a>
+    <a href="https://google.com" target="_blank" class="btn-playstore">🤖 View All My Apps on Google Play Store</a>
 
-    <!-- SCREENSHOT IMAGE DISPLAY -->
     <div class="app-screenshot-container">
         <img src="noam.jpg" alt="Elbaz Haviv Google Play Store Apps" class="app-screenshot">
     </div>
@@ -126,12 +125,19 @@
 
 <script>
     function switchApp(appId, button) {
-        document.querySelectorAll('.faq-section').forEach(section => {
-            section.classList.remove('active');
-        });
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.classList.remove('active');
-        });
+        // Hide all FAQ sections
+        var sections = document.getElementsByClassName('faq-section');
+        for (var i = 0; i < sections.length; i++) {
+            sections[i].classList.remove('active');
+        }
+        
+        // Deactivate all tab buttons
+        var buttons = document.getElementsByClassName('tab-btn');
+        for (var j = 0; j < buttons.length; j++) {
+            buttons[j].classList.remove('active');
+        }
+        
+        // Show selected section and activate clicked button
         document.getElementById(appId).classList.add('active');
         button.classList.add('active');
     }
