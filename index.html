@@ -9,18 +9,13 @@
         .container { max-width: 700px; background: white; margin: 30px auto; padding: 35px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
         h1 { color: #2c3e50; text-align: center; margin-bottom: 5px; font-size: 28px; }
         p.subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; font-size: 16px; }
-        .btn-playstore { display: block; background: #27ae60; color: white; text-align: center; padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-bottom: 25px; font-size: 16px; box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2); transition: background 0.2s; }
+        .btn-playstore { display: block; background: #27ae60; color: white; text-align: center; padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-bottom: 35px; font-size: 16px; box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2); transition: background 0.2s; }
         .btn-playstore:hover { background: #219653; }
-        
-        .app-screenshot-container { text-align: center; margin-bottom: 35px; }
-        .app-screenshot { max-width: 100%; height: auto; max-height: 450px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 1px solid #e2e8f0; }
-        
         h3 { color: #34495e; margin-bottom: 12px; }
         .app-tabs { display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
         .tab-btn { background: #e2e8f0; border: none; padding: 10px 18px; border-radius: 20px; cursor: pointer; font-weight: 600; color: #4a5568; transition: all 0.2s; font-size: 14px; }
         .tab-btn:hover { background: #cbd5e1; }
         .tab-btn.active { background: #3182ce; color: white; box-shadow: 0 4px 6px rgba(49, 130, 206, 0.3); }
-        
         .faq-section { display: none; }
         .faq-section.active { display: block; }
         .faq-item { border-bottom: 1px solid #edf2f7; padding: 16px 0; }
@@ -28,7 +23,6 @@
         .faq-question:hover { color: #3182ce; }
         .faq-answer { display: none; margin-top: 10px; color: #4a5568; line-height: 1.6; font-size: 15px; }
         .arrow { font-size: 18px; color: #a0aec0; transition: transform 0.2s; }
-        
         .contact-box { background: #ebf8ff; border: 1px solid #bee3f8; border-radius: 8px; padding: 20px; margin-top: 40px; text-align: center; }
         .contact-box h4 { margin: 0 0 10px 0; color: #2b6cb0; font-size: 18px; }
         .contact-box p { margin: 0 0 15px 0; color: #4a5568; font-size: 14px; }
@@ -44,22 +38,16 @@
     <h1>EHV Apps Support Center</h1>
     <p class="subtitle">Select your app below to get instant interactive help and solutions.</p>
     
-    <a href="https://google.com" target="_blank" class="btn-playstore">🤖 View All My Apps on Google Play Store</a>
-
-    <div class="app-screenshot-container">
-        <img src="noam.jpg" alt="Elbaz Haviv Google Play Store Apps" class="app-screenshot">
-    </div>
+    <!-- ACCURATE DEVELOPER LINK BELOW -->
+    <a href="https://play.google.com/store/apps/developer?id=Elbaz+Haviv" target="_blank" class="btn-playstore">🤖 View All My Apps on Google Play Store</a>
 
     <h3>Which app do you need help with?</h3>
     <div class="app-tabs">
         <button class="tab-btn active" onclick="switchApp('sudoku', this)">🧩 Sudoku Helper</button>
         <button class="tab-btn" onclick="switchApp('cryptarithm', this)">🔢 Cryptarithm Solver</button>
-        <button class="tab-btn" onclick="switchApp('regex', this)">⚙️ Regex Pattern Tester</button>
-        <button class="tab-btn" onclick="switchApp('bulls', this)">🐂 Bulls and Cows</button>
-        <button class="tab-btn" onclick="switchApp('hitmiss', this)">🎯 Hit Miss Game</button>
     </div>
 
-    <!-- 1. SUDOKU FAQ SECTION -->
+    <!-- SUDOKU FAQ SECTION -->
     <div id="sudoku" class="faq-section active">
         <h3>Sudoku Helper - FAQs</h3>
         <div class="faq-item">
@@ -72,39 +60,12 @@
         </div>
     </div>
 
-    <!-- 2. CRYPTARITHM FAQ SECTION -->
+    <!-- CRYPTARITHM FAQ SECTION -->
     <div id="cryptarithm" class="faq-section">
         <h3>Cryptarithm Solver - FAQs</h3>
         <div class="faq-item">
             <div class="faq-question" onclick="toggleFaq(this)">How do I synchronize my progress? <span class="arrow">+</span></div>
             <div class="faq-answer">Go to the Profile section inside the app menu and toggle the "Google Play Games Cloud Save" option to link your live data progress automatically.</div>
-        </div>
-    </div>
-
-    <!-- 3. REGEX FAQ SECTION -->
-    <div id="regex" class="faq-section">
-        <h3>Regex Pattern Tester - FAQs</h3>
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">Does this app support flavor-specific regex? <span class="arrow">+</span></div>
-            <div class="faq-answer">Yes, you can toggle between Standard JavaScript, Python, and PCRE flavors inside the editor settings menu.</div>
-        </div>
-    </div>
-
-    <!-- 4. BULLS AND COWS FAQ SECTION -->
-    <div id="bulls" class="faq-section">
-        <h3>Bulls and Cows - FAQs</h3>
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">What is the difference between a Bull and a Cow? <span class="arrow">+</span></div>
-            <div class="faq-answer">A "Bull" means a digit is correct and in the right position. A "Cow" means a digit is correct but in the wrong position.</div>
-        </div>
-    </div>
-
-    <!-- 5. HIT MISS FAQ SECTION -->
-    <div id="hitmiss" class="faq-section">
-        <h3>Hit Miss Game - FAQs</h3>
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">How do I reset my high score statistics? <span class="arrow">+</span></div>
-            <div class="faq-answer">Navigate to Settings from the main dashboard, scroll down, and tap on "Clear Local History Data".</div>
         </div>
     </div>
 
@@ -125,19 +86,12 @@
 
 <script>
     function switchApp(appId, button) {
-        // Hide all FAQ sections
-        var sections = document.getElementsByClassName('faq-section');
-        for (var i = 0; i < sections.length; i++) {
-            sections[i].classList.remove('active');
-        }
-        
-        // Deactivate all tab buttons
-        var buttons = document.getElementsByClassName('tab-btn');
-        for (var j = 0; j < buttons.length; j++) {
-            buttons[j].classList.remove('active');
-        }
-        
-        // Show selected section and activate clicked button
+        document.querySelectorAll('.faq-section').forEach(section => {
+            section.classList.remove('active');
+        });
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
         document.getElementById(appId).classList.add('active');
         button.classList.add('active');
     }
